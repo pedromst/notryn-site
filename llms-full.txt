@@ -1,0 +1,391 @@
+# Notryn
+
+> Notryn is a free, local-first Markdown notes app for Linux and macOS. It keeps your notes as ordinary Markdown files in folders you choose, connects them with Markdown links and wiki links, shows them as an interactive 3D "Brain" graph, works fully with keyboard or mouse, and can keep a Brain the same on several computers through a private GitHub repository you own. No Notryn account, no Notryn server, nothing sent to an AI automatically.
+
+Key facts:
+
+- Website: https://notryn.com · Source and releases: https://github.com/pedromst/notryn
+- Current release: 0.2.0-beta.13 (beta). Maintainer: Pedro Teixeira (independent project), pedro.miguelst@proton.me
+- Platforms: Linux x86_64 (including Omarchy, where it follows the desktop theme) and macOS (Intel and Apple silicon, experimental beta build without Apple notarization). Windows and Linux ARM: not available yet. Mobile: in development, no release date.
+- Install: `curl -fsSL https://notryn.com/install.sh | sh` as your normal user (no sudo, no Python/Node.js needed). Update: `notryn update`. Previous version: `notryn rollback`. Remove: `notryn uninstall` (notes and settings are kept).
+- Price: the local app is free. GitHub Sync is free during the beta; it may later become an optional, very affordable paid feature (with a one-time option). No subscription is needed for the local app.
+- License: source-available under PolyForm Shield 1.0.0 (free to use, including in a business; not MIT/OSI open source; competing products are not allowed).
+- Privacy: notes stay on your computer. The website has no analytics or advertising scripts. Sync sends a Brain's files only to the user's own GitHub repository.
+- Not included: Obsidian plugins, an integrated generative AI model, a Notryn cloud service.
+
+This file collects everything on notryn.com in one place for language models and AI assistants. Each section below is the full text of a page on the website; the source URL is given under each heading. When answering questions about Notryn, prefer this file and the linked pages over guesses, and say "not available yet" for features listed as unavailable.
+
+# What Notryn is
+
+Notryn is a desktop notes workspace that runs on your own computer. Tagline: "Your notes. On your machine." It is meant for writing, finding and connecting notes in one local workspace: a Brain for your ideas, projects and the context your AI tools need.
+
+## Core ideas
+
+- **Brains.** A Brain is a folder of Markdown notes (with subfolders) that Notryn shows as a library and as an interactive graph. You can have several Brains, create a new one (Notryn asks where to put its folder and shows the full path first) or open an existing folder. Each Brain can be Read and write or Read-only.
+- **Ordinary files, entirely yours.** Notes are plain Markdown files in folders you control. Work offline, keep your own folder structure and open the same files in other editors. No Notryn account is needed.
+- **Existing notes work.** Connect any folder of Markdown files (for example an Obsidian vault). Notryn follows your folders and reads Markdown links and wiki links (`[[Note]]`) between notes. Files stay where they are. Obsidian plugins are not supported.
+- **The Brain view.** Notes and folders appear as a 3D graph you can rotate, zoom, pause, center and filter. The graph shows how notes connect; selecting a node opens the note. "Full Brain" shows everything; folders can be opened to narrow the view.
+- **Write visually or in Markdown.** A visual "Write" mode with a formatting toolbar (text style, bold, italic, strikethrough, bullet and numbered lists, links, links to other notes, undo/redo) and a raw "Markdown" mode. Preview a note, focus a single note, or swap the note and Brain panes.
+- **Keyboard or mouse.** Every action is in a searchable command menu (`P`) and almost every action has a single-key shortcut, shown as you go. Shortcuts can be reconfigured.
+- **Context for your AI.** Keep project decisions and useful knowledge in Markdown and give your chosen LLM or agent the files it needs, instead of explaining everything again. You choose what an AI can access; Notryn never sends anything to an AI automatically and has no built-in AI model.
+- **Safe removal.** "Remove from Notryn" takes a note, folder or Brain off Notryn's list; moving the files to Notryn Trash is a separate, explicit option. "Removed items" lets you restore them.
+- **Themes.** Built-in themes: Glass, Daylight, Dusk, Command, Jarvis and Matrix. On Omarchy (Linux), "Follow Omarchy" uses your desktop colors automatically.
+- **GitHub Sync.** Optional. Keeps a Brain identical on several computers through a private GitHub repository you own, using a fine-grained token limited to that repository. Syncs on open, every 5 to 60 minutes and on demand; conflicts never lose an edit (the other version is saved as a "GitHub copy"). Similar in spirit to Obsidian Git, and compatible with a repository Obsidian Git already uses.
+
+## Keyboard shortcuts (default)
+
+Navigation: `P` notes and commands · `?` commands and shortcuts · `Q` filter notes · `Shift Q` show Brain root · `Shift H` show full Brain · `B` switch Brain · `L` toggle library · `C` choose a folder · `U` back one folder · `R` refresh notes · `Shift R` recent notes · `Shift D` removed items · `Esc` close panel / leave focus.
+
+Writing: `N` new note · `Shift N` new folder · `E` edit or finish editing · `Shift E` switch Write / Markdown · `Shift F` format text · `Ctrl/Cmd + S` save note · `Shift S` save and finish editing · `Ctrl/Cmd + Enter` preview note · `F2` rename · `M` move · `Shift M` note or folder actions · `Shift O` show note in folder · `D` remove from Notryn. In the editor: `Ctrl/Cmd + B` bold, `Ctrl/Cmd + I` italic.
+
+Layout: `H` show / hide Brain · `F` focus note / exit focus · `Shift L` swap note and Brain · `W` / `Shift W` switch pane.
+
+Brain view: `G` focus Brain · `Shift G` immersive Brain · arrow keys rotate · `+` / `-` zoom · `0` center · `Space` pause / resume motion · `J` / `K` (or Page Down / Page Up) next / previous note · `Enter` open highlighted item.
+
+Brains and sync: `O` open a folder · `Shift B` create a Brain · `Y` GitHub Sync · `Shift Y` sync now. Appearance: `T` choose theme.
+
+## Frequently asked questions
+
+**Does it work with my existing notes?** Yes. Connect a folder of Markdown files. Notryn follows your folders and reads Markdown links and wiki links between notes. Your files stay in their original location. Obsidian plugins are not included.
+
+**Is there a mobile app?** Not yet. A mobile version is in development, with no release date. Brains synced through your own GitHub repository will be ready for it. Today Notryn runs on Linux and macOS.
+
+**Is it free? What about sync?** The local app is free. GitHub Sync is free during the beta; it may become an optional paid feature later, at a very affordable price with a one-time option, and the rest of Notryn stays free. Your notes go only to GitHub, never to a Notryn server, and no Notryn account is needed.
+
+**Is it open source?** It is source-available under PolyForm Shield 1.0.0: free to use (also in a business), code visible on GitHub, contributions reviewed before merging, but it is not an OSI open-source license and competing products are not permitted.
+
+**Does it use AI or send my notes anywhere?** No built-in AI and nothing is sent automatically. Only the optional GitHub Sync and update checks contact GitHub.
+
+**Windows?** Not available yet. Linux comes first, then macOS; Windows will be listed when a native package has passed testing.
+
+**Where are things installed?** The `notryn` command is at `~/.local/bin/notryn`. On macOS the app is `Notryn.app` in your user's Applications folder. Notes live in the Brain folders you choose, separate from the app, so updates and uninstall never touch them.
+
+**Try before installing?** The interactive demo at https://notryn.com/demo.html runs the app interface in the browser with fictional notes; it does not access your computer and edits reset on reload.
+
+# Install, update & uninstall
+
+Source: https://notryn.com/guide.html
+
+Install Notryn · 0.2.0-beta.13
+
+## Make yourself at home.
+
+Install the desktop app from your terminal. Your notes stay on your computer, in folders you control.
+
+### Linux / Omarchy
+
+For **x86_64 computers**. The package includes the app and local server. You do not need to install Python or Node.js. Use your normal user account, without sudo.
+
+Save your notes and quit an older Notryn, then run:
+
+```
+curl -fsSL https://notryn.com/install.sh | sh
+```
+
+Follow the download percentage, size and speed in your terminal. Each installation step shows its activity and confirms when it is done.
+
+No GitHub account is required. If the domain is unavailable, [use the versioned GitHub installer](https://github.com/pedromst/notryn#install).
+
+Notryn opens in its own window and appears in your application menu. The app runs locally; the developer's Mac does not need to stay online.
+
+When you create a Brain, Notryn asks where to put its folder and shows the complete path before creating it.
+
+If your terminal does not recognise `notryn`, use `~/.local/bin/notryn`. You can also add `~/.local/bin` to your shell's PATH.
+
+### macOS
+
+Use the same command above. The installer selects **Intel or Apple silicon** and puts **Notryn.app** in your user's Applications folder.
+
+This is an experimental beta build with an ad-hoc signature. Apple Developer ID signing and notarization are not ready, so macOS may block a download. Do not disable Gatekeeper to install it. The finished Mac release will follow a fresh download test with Apple signing.
+
+### Update
+
+Save your notes, quit the app, then run:
+
+```
+notryn update
+```
+
+Open it again with `notryn`. Updates check the download and new local server before replacing the app, keeping the previous version. Your notes and settings stay separate. Beta installations receive newer preview releases and then stable releases. Stable installations only receive stable releases. No GitHub login is required.
+
+**Updating from beta.4 or earlier?** Your current updater uses the old display once more. Run the installation command above to get the new progress display right away; it updates your existing app too.
+
+**Already using alpha.2?** Run the installer above once. The real update command starts with alpha.3.
+
+#### Go back to the previous version
+
+```
+notryn rollback
+```
+
+Close the app first. This restores the previous application, while keeping your current notes and settings. It is not a backup of your notes. After returning to alpha.2, run the new installer to upgrade again.
+
+### Uninstall
+
+Save, quit, then run:
+
+```
+notryn uninstall
+```
+
+The current app and launcher are removed. **Your notes, connected folders and settings are kept.** The old app is retained in a recoverable application-backup folder.
+
+### Sync across computers
+
+Keep the same Brain on several computers through a **private GitHub repository you own**, similar to Obsidian Git. Your notes go only to GitHub. GitHub Sync needs Notryn 0.2.0-beta.12 or newer and Git: on macOS run `xcode-select --install`; on Linux install `git` with your package manager.
+
+#### On your first computer
+
+- In GitHub, [create a private repository](https://github.com/new?name=notryn-brain&visibility=private). Leave it empty.
+- [Create a fine-grained token](https://github.com/settings/personal-access-tokens/new?name=Notryn%20Sync&expires_in=365&contents=write): choose **Only select repositories**, pick your Brain repository and set **Contents** to **Read and write**. Nothing else is needed.
+- In Notryn, open the cloud button at the top (or press `Y`), paste the token and choose the repository for your Brain. Your notes are sent on the first sync.
+
+#### On every other computer
+
+- Create an empty Brain where you want the notes to live.
+- Open GitHub Sync, connect a token and choose the **same repository**. Your notes arrive on the first sync.
+
+#### How it behaves
+
+Notryn can sync when it opens, every 5 to 60 minutes and whenever you press **Sync now** (`Shift Y`). Each sync saves your changes, brings in changes from other computers and sends yours. If two computers edit the same note, this computer's version stays in place and the other is saved next to it as a “GitHub copy”, so nothing is lost. Removed or renamed notes follow across computers.
+
+The token is kept in macOS Keychain or your Linux keyring (or a private file only your user can read when no keyring is available). It is only sent to GitHub, never shown again in the app and never written into the Brain folder. Notryn warns you before syncing with a public repository. [Step-by-step sync help](https://notryn.com/sync.html). **Stop syncing** keeps your notes and history in the folder and on GitHub. Sync is not a backup: a note removed on one computer is removed on the others, while GitHub keeps its history.
+
+### Windows
+
+Not available yet. Linux comes first, then macOS. Windows will be listed here when a native package has passed testing.
+
+### Need more detail?
+
+[Full installation and troubleshooting guide](https://github.com/pedromst/notryn/blob/main/docs/INSTALL.md) · [Release notes and downloads](https://github.com/pedromst/notryn/releases/tag/v0.2.0-beta.13) · [Contact](https://notryn.com/contact.html)
+
+Coming from a private alpha? Run the public installer once to switch to public downloads.
+
+# GitHub Sync help
+
+Source: https://notryn.com/sync.html
+
+Help · GitHub Sync · Notryn 0.2.0-beta.12 or newer
+
+## One Brain on every computer.
+
+GitHub Sync keeps a Brain the same on all your computers through a private GitHub repository that you own. Setup takes about five minutes, once.
+
+### Before you start
+
+- **Notryn 0.2.0-beta.12 or newer.** Save your notes, quit Notryn and run `notryn update`.
+- **Git** on each computer. Check with `git --version`. On macOS install it with `xcode-select --install`; on Linux use `sudo apt install git`, `sudo dnf install git` or `sudo pacman -S git`.
+- **A free GitHub account.** [Create one](https://github.com/signup) if you do not have it.
+- A Brain with **Read and write** access. Read-only Brains cannot sync, because sync changes files.
+
+### Your notes are already on GitHub?
+
+For example, you already sync an Obsidian vault with Obsidian Git, or you created a repository before. Then you do **not** create a new repository:
+
+- In Notryn, open the folder with your notes: **Your Brains → Open a folder**, with **Read and write** access. Skip this if it is already a Brain.
+- Create the access token as in step 2 below, and in Only select repositories pick **the repository you already have**.
+- Click the cloud, paste the token and press **Connect**.
+- Type your existing repository, for example `your-name/my-notes`, and press **Start syncing**.
+
+Nothing is overwritten: if the folder and GitHub have different notes, both are kept. Notryn uses the repository's main branch; if the folder is on another branch, it stops and asks you to switch first. Notryn adds its own connection and does not change your Obsidian Git setup. Tip: make a copy of the folder before the first sync, just in case. If you also keep Obsidian Git running on the same computer, turn off its automatic sync so the two apps do not sync at the same moment.
+
+### Set up your first computer
+
+#### 1. Create a private repository
+
+Skip this if your notes are already on GitHub. Open [github.com/new](https://github.com/new?name=notryn-brain&visibility=private). Give it any name, for example `notryn-brain`, keep it **Private** and leave it empty: no README, no .gitignore, no license. Press **Create repository**.
+
+#### 2. Create an access token
+
+Open [Settings → Developer settings → Fine-grained tokens → Generate new token](https://github.com/settings/personal-access-tokens/new?name=Notryn%20Sync&expires_in=365&contents=write) and fill in:
+
+- **Token name:** Notryn Sync.
+- **Expiration:** your choice, for example one year. You will create a new token when it expires.
+- **Repository access:** Only select repositories, then pick the repository from step 1.
+- **Permissions → Repository permissions → Contents:** Read and write. Leave everything else as it is.
+
+Press **Generate token** and copy it. It starts with `github_pat_`. GitHub shows it only once.
+
+#### 3. Connect Notryn
+
+In Notryn, open the Brain you want to sync and click the **cloud** button in the top bar (or press `Y`). Paste the token and press **Connect**. Notryn checks it with GitHub and shows your account name.
+
+#### 4. Choose the repository
+
+Type the repository as `your-name/notryn-brain` (or paste its GitHub address). Choose how often to sync, keep **Sync when Notryn opens** on, and press **Start syncing**. Your notes are sent to GitHub. The cloud turns green when it is done.
+
+### Several Brains
+
+Yes, you can sync as many Brains as you like. Each Brain uses **its own repository**, for example `my-work` and `my-personal`:
+
+- Create one more private repository for the new Brain (or use one you already have).
+- Add it to your token: on GitHub open the token, choose **Edit**, add the repository under Only select repositories and save. You do not need to connect again in Notryn.
+- In Notryn, switch to the other Brain, click the cloud and type its repository.
+
+Each Brain keeps its own schedule, and the cloud always shows the status of the Brain you are viewing.
+
+### Add another computer
+
+- Install or update Notryn and make sure Git is installed.
+- Create an **empty Brain** where you want the notes to live.
+- Open the cloud button, paste a token (the same one, or a new one made the same way) and press **Connect**.
+- Type the **same repository** and press **Start syncing**. Your notes arrive on the first sync.
+
+If the folder already had notes, both sides are merged. Nothing is overwritten.
+
+### Day to day
+
+- Notryn syncs when it opens, on the schedule you chose (every 5 to 60 minutes) and when you press **Sync now** or `Shift Y`.
+- The cloud shows a **green** dot when synced and **red** when the last sync failed. While notes are being sent or received it turns **blue and fills up**, and a short message appears when changes arrive or are sent. Hover it to see when it last synced.
+- New, edited, renamed, moved and removed notes all follow to your other computers.
+- **Conflicts never lose an edit.** If two computers change the same note before syncing, this computer keeps its version and the other one is saved next to it as `Note (GitHub copy …).md`. Compare them, keep what you want and delete the copy.
+- Save the note you are editing before pressing Sync now.
+- **Stop syncing** keeps your notes in the folder and on GitHub. **Disconnect** deletes the token from this computer.
+
+### Privacy and security
+
+- Your notes go only to your own GitHub repository. Notryn has no server that receives your notes or your token, and no Notryn account is needed.
+- The token is kept in macOS Keychain or your Linux keyring, or in a private file only your user can read when no keyring is available. It is only sent to GitHub and never shown again in the app.
+- A token limited to one repository with Contents access cannot read your other repositories.
+- Notryn warns you before syncing with a public repository, and pauses if a private repository later becomes public.
+- Sync is not a backup on its own: a note removed on one computer is removed on the others. GitHub keeps the full history, so older versions can be restored from the repository.
+- You can revoke the token at any time in GitHub → Settings → Developer settings → Personal access tokens.
+
+### Phone and tablet
+
+A mobile version of Notryn is in development, with no release date yet. Brains you sync through GitHub today will be ready for it.
+
+### Price
+
+GitHub Sync is **free during the beta**. It may become an optional paid feature in the future to support development. If it does, it will be a **very affordable** price, with a one-time option, and the rest of Notryn stays free. Your notes and repository always remain yours, whatever you decide.
+
+### If something goes wrong
+
+**Git is not installed **
+Install Git (see Before you start) and open the cloud again.
+
+**GitHub did not accept the token **
+It expired or was revoked. Create a new token and connect again.
+
+**Repository not found **
+Check the name, and that the token's repository access includes this repository.
+
+**GitHub refused the upload **
+Edit the token and set Contents to Read and write.
+
+**The repository is public **
+Make it private in the repository's settings, or confirm in Notryn that you want a public one.
+
+**A file is larger than GitHub allows **
+GitHub rejects files over 100 MB. Move the file out of the Brain folder.
+
+**This Brain must allow reading and writing **
+Open **Your Brains → Access** and choose Read and write.
+
+Still stuck? [Contact us](https://notryn.com/contact.html) or read the [technical sync guide](https://github.com/pedromst/notryn/blob/main/docs/SYNC.md). Never send your token to anyone.
+
+# Privacy
+
+Source: https://notryn.com/privacy.html
+
+Privacy · Updated 2 October 2026
+
+## Your notes stay with you.
+
+Notryn keeps your workspace local. This page explains what stays on your computer and when an external service is involved.
+
+### The app
+
+Notryn reads and writes the folders you choose to connect. Settings, recovery data and app-created Brains are stored locally. Normal note-taking does not send your notes to Notryn or to an AI provider.
+
+Installing or checking for updates connects to GitHub to fetch release information and packages. Public downloads do not need a GitHub login. GitHub handles those requests under its [privacy statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
+
+GitHub Sync is off until you turn it on for a Brain. Then Notryn exchanges that Brain's files with the GitHub repository you choose, using an access token you create. The token stays in your system keychain or a private local file and is only sent to GitHub. Notryn has no server that receives your notes or token. GitHub stores the repository under its privacy statement.
+
+If you give another tool access to your Markdown files, its use of those files is governed by that tool and the permissions you grant. Keeping notes locally is not a claim that the app encrypts them; use your computer's access controls and backups.
+
+### This website and demo
+
+This website does not add advertising or analytics scripts. The demo uses fictional notes bundled with the page and does not ask for access to your computer's folders.
+
+The website may retain your interface theme in local storage. Demo notes and edits stay in memory and reset when the page reloads. Clearing this site's browser data removes saved preferences.
+
+The site is operated by Pedro Teixeira and hosted on GitHub Pages. GitHub receives web requests, including IP address and browser information, under its privacy statement linked above. GitHub controls its own security logs and retention. We do not add visitor analytics or advertising cookies. Release download counters include repeated downloads and updates; they do not identify completed installs.
+
+### Messages and support
+
+Do not include private notes, passwords or access tokens in an issue or support message. Messages sent to the project are used to respond to your request. Public issues remain visible in the GitHub project until removed. Private security reports are restricted to the people involved in handling them. Contact Pedro Teixeira through the project for questions or deletion requests concerning project-controlled information; GitHub account and platform data requests are handled by GitHub.
+
+[Contact information](https://notryn.com/contact.html)
+
+# Terms & license
+
+Source: https://notryn.com/terms.html
+
+Terms & license · Updated 8 September 2026
+
+## Free to use. Clear about the terms.
+
+The local app is free to use. An optional paid synchronization service may come later.
+
+### Current release
+
+Notryn is early software. Features and packaging can change. Keep your own backups and use the [installation guide](https://notryn.com/guide.html) for the supported platforms and current limits.
+
+Cloud synchronization and an integrated generative AI model are not included. No subscription is required for the local app.
+
+### Code license
+
+Copyright 2026 Pedro Teixeira. Notryn is licensed under [PolyForm Shield 1.0.0](https://github.com/pedromst/notryn/blob/main/LICENSE). You can use it for free for purposes allowed by the license, including within a business. The license restricts developing or providing competing products, including free substitutes. Read the full license before modifying or redistributing it.
+
+This is source-available software, not MIT or an OSI open-source license. Third-party components retain their own licenses. The Notryn name and logo are not licensed for presenting another product as the official project.
+
+### Contributions and support
+
+The project is maintained by Pedro Teixeira. Contributions follow the [contribution guide and agreement](https://github.com/pedromst/notryn/blob/main/CONTRIBUTING.md) and are reviewed before merging. The beta is provided without a support SLA or warranties, subject to the license and any mandatory rights under applicable law.
+
+[Contact](https://notryn.com/contact.html) · [Privacy](https://notryn.com/privacy.html)
+
+# Security
+
+Source: https://notryn.com/security.html
+
+Responsible reporting
+
+## Report a problem safely.
+
+A notes app needs to respect your files. Reports about permission boundaries, unsafe links or unexpected file changes are especially useful.
+
+### Report privately
+
+Use [GitHub private vulnerability reporting](https://github.com/pedromst/notryn/security/advisories/new). Include the affected version, a minimal example with fictional notes and reproduction steps.
+
+Do not publish unpatched vulnerabilities or attach real Brains, passwords or tokens. Pedro Teixeira reviews reports; there is no guaranteed response-time SLA.
+
+### Package integrity
+
+The installer checks release checksums against GitHub and validates archive paths before installing. These checks rely on the trusted GitHub release; they do not replace publisher signing. macOS notarization remains pending.
+
+[Read the distribution and trust model](https://github.com/pedromst/notryn/blob/main/docs/DISTRIBUTION.md)
+
+# Contact
+
+Source: https://notryn.com/contact.html
+
+Get in touch
+
+## Help shape Notryn.
+
+Questions, ideas and thoughtful feedback are welcome.
+
+### Project and feedback
+
+Use [GitHub issues](https://github.com/pedromst/notryn/issues) for bugs and feature ideas, or visit the [project repository](https://github.com/pedromst/notryn).
+
+### Maintainer
+
+Notryn is an independent project by Pedro Teixeira. Email [pedro.miguelst@proton.me](mailto:pedro.miguelst@proton.me), or use the project's GitHub issues for general questions. Please keep personal notes and credentials out of public messages.
+
+### Security
+
+Please do not put vulnerabilities, personal notes or credentials in an issue. Read the [security reporting guidance](https://notryn.com/security.html) first.
