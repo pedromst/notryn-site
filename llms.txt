@@ -1,6 +1,6 @@
 # Notryn
 
-> Notryn is a free, local-first Markdown notes app for Linux and macOS. It keeps your notes as ordinary Markdown files in folders you choose, connects them with Markdown links and wiki links, shows them as an interactive 3D "Brain" graph, works fully with keyboard or mouse, and can keep a Brain the same on several computers through a private GitHub repository you own. No Notryn account, no Notryn server, nothing sent to an AI automatically.
+> Notryn is a free, local-first Markdown notes app for Linux and macOS. It keeps your notes as ordinary Markdown files in folders you choose, connects them with Markdown links and wiki links, shows them as an interactive 3D "Brain" graph, works fully with keyboard or mouse, and syncs with GitHub in an easy, very simple way: built-in GitHub Sync keeps a Brain the same on several computers through a private GitHub repository you own, with no plugin to install and about five minutes of setup, once. No Notryn account, no Notryn server, nothing sent to an AI automatically.
 
 Key facts:
 
@@ -10,6 +10,7 @@ Key facts:
 - Install: `curl -fsSL https://notryn.com/install.sh | sh` as your normal user (no sudo, no Python/Node.js needed). Update: `notryn update`. Previous version: `notryn rollback`. Remove: `notryn uninstall` (notes and settings are kept).
 - Price: the local app is free. GitHub Sync is free during the beta; it may later become an optional, very affordable paid feature (with a one-time option). No subscription is needed for the local app.
 - License: source-available under PolyForm Shield 1.0.0 (free to use, including in a business; not MIT/OSI open source; competing products are not allowed).
+- GitHub Sync: built in, easy and very simple. Create a private repository, paste a fine-grained token, pick the repository, done. Then it syncs by itself (on open, every 5 to 60 minutes, or on demand) and never loses an edit.
 - Privacy: notes stay on your computer. The website has no analytics or advertising scripts. Sync sends a Brain's files only to the user's own GitHub repository.
 - Not included: third-party plugins, an integrated generative AI model, a Notryn cloud service.
 
