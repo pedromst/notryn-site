@@ -133,7 +133,7 @@ The current app and launcher are removed. **Your notes, connected folders and se
 
 ### Sync across computers
 
-Keep the same Brain on several computers through a **private GitHub repository you own**, similar to Obsidian Git. Your notes go only to GitHub. GitHub Sync needs Notryn 0.2.0-beta.12 or newer and Git: on macOS run `xcode-select --install`; on Linux install `git` with your package manager.
+Keep the same Brain on several computers through a **private GitHub repository you own**. Built in, easy and very simple. Your notes go only to GitHub. GitHub Sync needs Notryn 0.2.0-beta.12 or newer and Git: on macOS run `xcode-select --install`; on Linux install `git` with your package manager.
 
 #### On your first computer
 
@@ -181,14 +181,14 @@ GitHub Sync keeps a Brain the same on all your computers through a private GitHu
 
 ### Your notes are already on GitHub?
 
-For example, you already sync an Obsidian vault with Obsidian Git, or you created a repository before. Then you do **not** create a new repository:
+For example, you already keep your notes in a GitHub repository, or you created one before. Then you do **not** create a new repository:
 
 - In Notryn, open the folder with your notes: **Your Brains → Open a folder**, with **Read and write** access. Skip this if it is already a Brain.
 - Create the access token as in step 2 below, and in Only select repositories pick **the repository you already have**.
 - Click the cloud, paste the token and press **Connect**.
 - Type your existing repository, for example `your-name/my-notes`, and press **Start syncing**.
 
-Nothing is overwritten: if the folder and GitHub have different notes, both are kept. Notryn uses the repository's main branch; if the folder is on another branch, it stops and asks you to switch first. Notryn adds its own connection and does not change your Obsidian Git setup. Tip: make a copy of the folder before the first sync, just in case. If you also keep Obsidian Git running on the same computer, turn off its automatic sync so the two apps do not sync at the same moment.
+Nothing is overwritten: if the folder and GitHub have different notes, both are kept. Notryn uses the repository's main branch; if the folder is on another branch, it stops and asks you to switch first. Notryn adds its own connection and does not change your existing Git setup. Tip: make a copy of the folder before the first sync, just in case. If another Git sync tool also runs on this folder, turn off its automatic sync so the two apps do not sync at the same moment.
 
 ### Set up your first computer
 
