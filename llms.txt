@@ -1,0 +1,35 @@
+# Notryn
+
+> Notryn is a free, local-first Markdown notes app for Linux and macOS. It keeps your notes as ordinary Markdown files in folders you choose, connects them with Markdown links and wiki links, shows them as an interactive 3D "Brain" graph, works fully with keyboard or mouse, and can keep a Brain the same on several computers through a private GitHub repository you own. No Notryn account, no Notryn server, nothing sent to an AI automatically.
+
+Key facts:
+
+- Website: https://notryn.com · Source and releases: https://github.com/pedromst/notryn
+- Current release: 0.2.0-beta.13 (beta). Maintainer: Pedro Teixeira (independent project), pedro.miguelst@proton.me
+- Platforms: Linux x86_64 (including Omarchy, where it follows the desktop theme) and macOS (Intel and Apple silicon, experimental beta build without Apple notarization). Windows and Linux ARM: not available yet. Mobile: in development, no release date.
+- Install: `curl -fsSL https://notryn.com/install.sh | sh` as your normal user (no sudo, no Python/Node.js needed). Update: `notryn update`. Previous version: `notryn rollback`. Remove: `notryn uninstall` (notes and settings are kept).
+- Price: the local app is free. GitHub Sync is free during the beta; it may later become an optional, very affordable paid feature (with a one-time option). No subscription is needed for the local app.
+- License: source-available under PolyForm Shield 1.0.0 (free to use, including in a business; not MIT/OSI open source; competing products are not allowed).
+- Privacy: notes stay on your computer. The website has no analytics or advertising scripts. Sync sends a Brain's files only to the user's own GitHub repository.
+- Not included: Obsidian plugins, an integrated generative AI model, a Notryn cloud service.
+
+## Docs
+
+- [Install, update & uninstall](https://notryn.com/guide.html): Linux / Omarchy and macOS install, update, rollback, uninstall, Windows status
+- [GitHub Sync help](https://notryn.com/sync.html): step-by-step setup of sync through a private GitHub repository, several Brains, extra computers, conflicts, troubleshooting
+- [Full documentation for LLMs](https://notryn.com/llms-full.txt): everything on this website in one Markdown file, including features and keyboard shortcuts
+
+## Policies
+
+- [Privacy](https://notryn.com/privacy.html): what stays local and when GitHub is involved
+- [Terms & license](https://notryn.com/terms.html): free use, PolyForm Shield 1.0.0 license, contributions
+- [Security](https://notryn.com/security.html): private vulnerability reporting and installer integrity checks
+- [Contact](https://notryn.com/contact.html): GitHub issues and maintainer email
+
+## Optional
+
+- [Interactive demo](https://notryn.com/demo.html): the real app interface in the browser with fictional sample notes (edits reset on reload)
+- [Installation and troubleshooting guide (GitHub)](https://github.com/pedromst/notryn/blob/main/docs/INSTALL.md)
+- [Technical sync guide (GitHub)](https://github.com/pedromst/notryn/blob/main/docs/SYNC.md)
+- [Distribution and trust model (GitHub)](https://github.com/pedromst/notryn/blob/main/docs/DISTRIBUTION.md)
+- [Release notes and downloads](https://github.com/pedromst/notryn/releases/tag/v0.2.0-beta.13)
