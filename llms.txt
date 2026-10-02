@@ -11,7 +11,7 @@ Key facts:
 - Price: the local app is free. GitHub Sync is free during the beta; it may later become an optional, very affordable paid feature (with a one-time option). No subscription is needed for the local app.
 - License: source-available under PolyForm Shield 1.0.0 (free to use, including in a business; not MIT/OSI open source; competing products are not allowed).
 - Privacy: notes stay on your computer. The website has no analytics or advertising scripts. Sync sends a Brain's files only to the user's own GitHub repository.
-- Not included: Obsidian plugins, an integrated generative AI model, a Notryn cloud service.
+- Not included: third-party plugins, an integrated generative AI model, a Notryn cloud service.
 
 ## Docs
 

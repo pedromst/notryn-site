@@ -11,7 +11,7 @@ Key facts:
 - Price: the local app is free. GitHub Sync is free during the beta; it may later become an optional, very affordable paid feature (with a one-time option). No subscription is needed for the local app.
 - License: source-available under PolyForm Shield 1.0.0 (free to use, including in a business; not MIT/OSI open source; competing products are not allowed).
 - Privacy: notes stay on your computer. The website has no analytics or advertising scripts. Sync sends a Brain's files only to the user's own GitHub repository.
-- Not included: Obsidian plugins, an integrated generative AI model, a Notryn cloud service.
+- Not included: third-party plugins, an integrated generative AI model, a Notryn cloud service.
 
 This file collects everything on notryn.com in one place for language models and AI assistants. Each section below is the full text of a page on the website; the source URL is given under each heading. When answering questions about Notryn, prefer this file and the linked pages over guesses, and say "not available yet" for features listed as unavailable.
 
@@ -23,14 +23,14 @@ Notryn is a desktop notes workspace that runs on your own computer. Tagline: "Yo
 
 - **Brains.** A Brain is a folder of Markdown notes (with subfolders) that Notryn shows as a library and as an interactive graph. You can have several Brains, create a new one (Notryn asks where to put its folder and shows the full path first) or open an existing folder. Each Brain can be Read and write or Read-only.
 - **Ordinary files, entirely yours.** Notes are plain Markdown files in folders you control. Work offline, keep your own folder structure and open the same files in other editors. No Notryn account is needed.
-- **Existing notes work.** Connect any folder of Markdown files (for example an Obsidian vault). Notryn follows your folders and reads Markdown links and wiki links (`[[Note]]`) between notes. Files stay where they are. Obsidian plugins are not supported.
+- **Existing notes work.** Connect any folder of Markdown files. Notryn follows your folders and reads Markdown links and wiki links (`[[Note]]`) between notes. Files stay where they are.
 - **The Brain view.** Notes and folders appear as a 3D graph you can rotate, zoom, pause, center and filter. The graph shows how notes connect; selecting a node opens the note. "Full Brain" shows everything; folders can be opened to narrow the view.
 - **Write visually or in Markdown.** A visual "Write" mode with a formatting toolbar (text style, bold, italic, strikethrough, bullet and numbered lists, links, links to other notes, undo/redo) and a raw "Markdown" mode. Preview a note, focus a single note, or swap the note and Brain panes.
 - **Keyboard or mouse.** Every action is in a searchable command menu (`P`) and almost every action has a single-key shortcut, shown as you go. Shortcuts can be reconfigured.
 - **Context for your AI.** Keep project decisions and useful knowledge in Markdown and give your chosen LLM or agent the files it needs, instead of explaining everything again. You choose what an AI can access; Notryn never sends anything to an AI automatically and has no built-in AI model.
 - **Safe removal.** "Remove from Notryn" takes a note, folder or Brain off Notryn's list; moving the files to Notryn Trash is a separate, explicit option. "Removed items" lets you restore them.
 - **Themes.** Built-in themes: Glass, Daylight, Dusk, Command, Jarvis and Matrix. On Omarchy (Linux), "Follow Omarchy" uses your desktop colors automatically.
-- **GitHub Sync.** Optional. Keeps a Brain identical on several computers through a private GitHub repository you own, using a fine-grained token limited to that repository. Syncs on open, every 5 to 60 minutes and on demand; conflicts never lose an edit (the other version is saved as a "GitHub copy"). Similar in spirit to Obsidian Git, and compatible with a repository Obsidian Git already uses.
+- **GitHub Sync.** Optional. Keeps a Brain identical on several computers through a private GitHub repository you own, using a fine-grained token limited to that repository. Syncs on open, every 5 to 60 minutes and on demand; conflicts never lose an edit (the other version is saved as a "GitHub copy").
 
 ## Keyboard shortcuts (default)
 
@@ -46,7 +46,7 @@ Brains and sync: `O` open a folder · `Shift B` create a Brain · `Y` GitHub Syn
 
 ## Frequently asked questions
 
-**Does it work with my existing notes?** Yes. Connect a folder of Markdown files. Notryn follows your folders and reads Markdown links and wiki links between notes. Your files stay in their original location. Obsidian plugins are not included.
+**Does it work with my existing notes?** Yes. Connect a folder of Markdown files. Notryn follows your folders and reads Markdown links and wiki links between notes. Your files stay in their original location.
 
 **Is there a mobile app?** Not yet. A mobile version is in development, with no release date. Brains synced through your own GitHub repository will be ready for it. Today Notryn runs on Linux and macOS.
 
