@@ -85,3 +85,20 @@ main :is(p,li,dd) a[href^="http"]:not(.button):not(.text-link)::after{
   content:"\00a0↗";
   text-decoration:none;
 }
+
+/* Benefits heading spans the cards. Card titles keep the previous heading size as h3. */
+.benefits > h2{grid-column:1 / -1;font-size:34px;line-height:1.2;letter-spacing:-.04em;margin:0 0 8px;max-width:16em}
+.benefits h3{font-size:25px;line-height:1.25;letter-spacing:-.035em;margin:18px 0;font-weight:600}
+.benefits{padding-top:72px}
+.demo-note{margin:18px 0 0;color:var(--muted,#96a7ad);font-size:16px;line-height:1.7}
+.closing{text-align:center;padding:24px 0 90px}
+.closing h2{font-size:34px;line-height:1.2;letter-spacing:-.04em;margin:0 auto 16px;max-width:14em}
+.closing p{color:var(--muted,#96a7ad);font-size:16px;line-height:1.7;margin:0 auto 24px;max-width:36em}
+.questions{padding-bottom:36px}
+@media(max-width:760px){
+  .benefits > h2{font-size:32px;margin:0 0 4px}
+  .benefits h3{font-size:23px;margin:10px 0}
+  .demo-note,.closing p{font-size:16px}
+  .closing{padding-bottom:55px}
+  .closing h2{font-size:32px}
+}
