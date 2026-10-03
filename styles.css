@@ -32,7 +32,6 @@ footer{flex-wrap:wrap}.footer-links{display:flex;flex-wrap:wrap;gap:22px;font-si
 .site-header nav{flex-shrink:0}.site-header .nav-cta,.site-header nav a{white-space:nowrap}.site-header .nav-cta{min-height:44px;display:inline-flex;align-items:center;flex:none;padding-inline:4px}
 .sync-kicker{display:inline-flex;align-items:center;gap:8px}
 .github-mark{width:16px;height:16px;flex:none;display:block;fill:currentColor;color:var(--text,#deeaed)}
-.questions details a{color:var(--accent,#b1e7d7);text-decoration:underline;text-underline-offset:3px}
 
 @media(max-width:760px){
   .site-header nav a{min-height:44px;display:inline-flex;align-items:center}
@@ -50,4 +49,39 @@ footer{flex-wrap:wrap}.footer-links{display:flex;flex-wrap:wrap;gap:22px;font-si
   .site-header nav a:not(.nav-cta){display:none}
   .hero-copy{font-size:16px}
   .hero h1{font-size:40px}
+}
+
+/* Body links. On iOS the grey paragraph colour can paint both the words and the underline, so the colour is set again here. */
+.questions details a,
+.guide-main a,
+main :is(p,li,dd) a:not(.button):not(.text-link){
+  color:var(--accent,#b1e7d7);
+  -webkit-text-fill-color:var(--accent,#b1e7d7);
+  text-decoration-line:underline;
+  text-decoration-color:var(--accent,#b1e7d7);
+  text-decoration-thickness:1px;
+  text-underline-offset:3px;
+  text-decoration-skip-ink:none;
+}
+.questions details a:hover,
+.questions details a:focus-visible,
+.guide-main a:hover,
+.guide-main a:focus-visible,
+main :is(p,li,dd) a:not(.button):not(.text-link):hover,
+main :is(p,li,dd) a:not(.button):not(.text-link):focus-visible{
+  color:#e9fff8;
+  -webkit-text-fill-color:#e9fff8;
+  text-decoration-color:#e9fff8;
+}
+.questions details a:focus-visible,
+.guide-main a:focus-visible,
+main :is(p,li,dd) a:not(.button):not(.text-link):focus-visible{
+  outline:2px solid var(--accent,#b1e7d7);
+  outline-offset:3px;
+}
+.questions details a[href^="http"]::after,
+.guide-main a[href^="http"]::after,
+main :is(p,li,dd) a[href^="http"]:not(.button):not(.text-link)::after{
+  content:"\00a0↗";
+  text-decoration:none;
 }
