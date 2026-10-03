@@ -32,7 +32,6 @@ footer{flex-wrap:wrap}.footer-links{display:flex;flex-wrap:wrap;gap:22px;font-si
 .site-header nav{flex-shrink:0}.site-header .nav-cta,.site-header nav a{white-space:nowrap}.site-header .nav-cta{min-height:44px;display:inline-flex;align-items:center;flex:none;padding-inline:4px}
 .sync-kicker{display:inline-flex;align-items:center;gap:8px}
 .github-mark{width:16px;height:16px;flex:none;display:block;fill:currentColor;color:var(--text,#deeaed)}
-.questions details a{color:var(--accent,#b1e7d7);text-decoration:underline;text-underline-offset:3px}
 
 @media(max-width:760px){
   .site-header nav a{min-height:44px;display:inline-flex;align-items:center}
@@ -50,4 +49,60 @@ footer{flex-wrap:wrap}.footer-links{display:flex;flex-wrap:wrap;gap:22px;font-si
   .site-header nav a:not(.nav-cta){display:none}
   .hero-copy{font-size:16px}
   .hero h1{font-size:40px}
+}
+
+/* Body links. On iOS the grey paragraph colour can paint both the words and the underline, so the colour is set again here. */
+.questions details a,
+.guide-main a,
+main :is(p,li,dd) a:not(.button):not(.text-link){
+  color:var(--accent,#b1e7d7);
+  -webkit-text-fill-color:var(--accent,#b1e7d7);
+  text-decoration-line:underline;
+  text-decoration-color:var(--accent,#b1e7d7);
+  text-decoration-thickness:1px;
+  text-underline-offset:3px;
+  text-decoration-skip-ink:none;
+}
+.questions details a:hover,
+.questions details a:focus-visible,
+.guide-main a:hover,
+.guide-main a:focus-visible,
+main :is(p,li,dd) a:not(.button):not(.text-link):hover,
+main :is(p,li,dd) a:not(.button):not(.text-link):focus-visible{
+  color:#e9fff8;
+  -webkit-text-fill-color:#e9fff8;
+  text-decoration-color:#e9fff8;
+}
+.questions details a:focus-visible,
+.guide-main a:focus-visible,
+main :is(p,li,dd) a:not(.button):not(.text-link):focus-visible{
+  outline:2px solid var(--accent,#b1e7d7);
+  outline-offset:3px;
+}
+.questions details a[href^="http"]::after,
+.guide-main a[href^="http"]::after,
+main :is(p,li,dd) a[href^="http"]:not(.button):not(.text-link)::after{
+  content:"\00a0↗";
+  text-decoration:none;
+}
+
+/* Benefits heading spans the cards. Card titles keep the previous heading size as h3. */
+.benefits > h2{grid-column:1 / -1;font-size:34px;line-height:1.2;letter-spacing:-.04em;margin:0 0 8px;max-width:16em}
+.benefits h3{font-size:25px;line-height:1.25;letter-spacing:-.035em;margin:18px 0;font-weight:600}
+.benefits{padding-top:72px}
+.demo-note{margin:18px 0 0;color:var(--muted,#96a7ad);font-size:16px;line-height:1.7}
+@media(max-width:760px){
+ .experience-heading{flex-direction:column;align-items:flex-start;gap:6px}
+ .experience-heading .small{max-width:none;text-align:left}
+}
+.closing{text-align:center;padding:24px 0 90px}
+.closing h2{font-size:34px;line-height:1.2;letter-spacing:-.04em;margin:0 auto 16px;max-width:14em}
+.closing p{color:var(--muted,#96a7ad);font-size:16px;line-height:1.7;margin:0 auto 24px;max-width:36em}
+.questions{padding-bottom:36px}
+@media(max-width:760px){
+  .benefits > h2{font-size:32px;margin:0 0 4px}
+  .benefits h3{font-size:23px;margin:10px 0}
+  .demo-note,.closing p{font-size:16px}
+  .closing{padding-bottom:55px}
+  .closing h2{font-size:32px}
 }

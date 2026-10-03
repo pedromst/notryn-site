@@ -5,7 +5,7 @@
  <span class="top-separator"></span><button id="brain-picker" class="brain-picker" aria-label="Choose a Brain"><span id="brain-name">Your Brains</span><svg class="icon"><use href="icons.svg#down"/></svg></button>
  <button id="open-command" class="global-search" aria-label="Search notes and commands"><svg class="icon"><use href="icons.svg#search"/></svg><span>Search or do something…</span><kbd class="mod">P</kbd></button>
  <button id="toggle-brain" class="secondary brain-visibility" aria-label="Hide brain" aria-pressed="true" title="Hide brain (H)"><svg class="icon"><use href="icons.svg#brain"/></svg><span>Hide brain</span><kbd>H</kbd></button>
- <div class="top-actions"><button id="new-note" class="primary" title="New note"><svg class="icon"><use href="icons.svg#plus"/></svg><span>New note</span></button><button id="open-sync" class="icon-button sync-button" aria-label="GitHub Sync" title="Sync across computers with GitHub" data-sync="off"><svg class="icon sync-fill" aria-hidden="true"><use href="icons.svg#cloud-solid"/></svg><svg class="icon"><use href="icons.svg#cloud"/></svg><span class="sync-dot" aria-hidden="true"></span></button><button id="open-themes" class="icon-button" aria-label="Themes" title="Themes"><svg class="icon"><use href="icons.svg#theme"/></svg></button><button id="open-shortcuts" class="icon-button" aria-label="Commands and shortcuts" title="Commands and shortcuts"><svg class="icon"><use href="icons.svg#keyboard"/></svg></button></div>
+ <div class="top-actions"><button id="new-note" class="primary" title="New note"><svg class="icon"><use href="icons.svg#plus"/></svg><span>New note</span></button><button id="open-sync" class="icon-button sync-button" aria-label="GitHub Sync" title="Sync across computers with GitHub" data-sync="off"><svg class="icon sync-fill" aria-hidden="true"><use href="icons.svg#cloud-solid"/></svg><svg class="icon"><use href="icons.svg#cloud"/></svg><span class="sync-dot" aria-hidden="true"></span></button><button id="open-themes" class="icon-button" aria-label="Themes" title="Themes"><svg class="icon"><use href="icons.svg#theme"/></svg></button><button id="open-shortcuts" class="icon-button" aria-label="Commands and shortcuts" title="Commands and shortcuts"><svg class="icon"><use href="icons.svg#keyboard"/></svg></button><div class="top-more"><button id="topbar-more" class="icon-button" type="button" aria-label="More actions" aria-haspopup="menu" aria-expanded="false" aria-controls="topbar-menu"><span aria-hidden="true">⋯</span></button><div id="topbar-menu" class="topbar-menu" role="menu" hidden><button type="button" role="menuitem" id="menu-shortcuts"><svg class="icon" aria-hidden="true"><use href="icons.svg#keyboard"/></svg>Commands and shortcuts</button></div></div></div>
 </header>
 <div class="workspace">
  <aside class="library" id="library"><div class="library-top"><span>Library</span><button id="sidebar-close" class="icon-button" aria-label="Collapse library"><svg class="icon"><use href="icons.svg#sidebar"/></svg></button></div>
@@ -108,4 +108,28 @@
  <div class="dialog-actions"><button id="open-link-note" type="button" class="secondary" hidden>Open note</button><button id="remove-link" type="button" class="secondary" hidden>Remove link</button><button type="button" class="secondary" data-close>Cancel</button><button class="primary" type="submit">Apply link</button></div>
 </form></dialog>
 <p id="visual-writing-help" class="sr-only">Write normally. Control or Command plus B makes text bold; I makes italic; K opens links; Z undoes. Control or Command plus S saves, Enter previews. Escape then Shift F opens formatting; Escape then P finds every command. Tab moves between controls.</p>
+<script>
+(() => {
+  const more = document.getElementById('topbar-more');
+  const menu = document.getElementById('topbar-menu');
+  if (!more || !menu) return;
+  const close = () => { menu.hidden = true; more.setAttribute('aria-expanded', 'false'); };
+  more.addEventListener('click', event => {
+    event.stopPropagation();
+    const open = menu.hidden;
+    menu.hidden = !open;
+    more.setAttribute('aria-expanded', String(open));
+    if (open) menu.querySelector('button').focus();
+  });
+  menu.addEventListener('click', event => event.stopPropagation());
+  document.getElementById('menu-shortcuts').addEventListener('click', () => {
+    close();
+    document.getElementById('open-shortcuts').click();
+  });
+  document.addEventListener('click', close);
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && !menu.hidden) { event.preventDefault(); close(); more.focus(); }
+  });
+})();
+</script>
 </body></html>

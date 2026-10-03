@@ -13,6 +13,18 @@
 .sync-button[data-sync=on] .sync-dot,.sync-dot[data-state=ok]{background:var(--accent);box-shadow:0 0 8px var(--accent)}
 .sync-button[data-sync=syncing] .sync-dot,.sync-dot[data-state=syncing]{background:var(--amber);animation:sync-pulse 1s ease-in-out infinite alternate}
 .sync-button[data-sync=error] .sync-dot,.sync-dot[data-state=error]{background:var(--theme-error,#e2b8a6)}
+/* Narrow demo bar: the keyboard action moves into a menu so the last icon is not cut off. */
+.top-more{display:none}
+.topbar-menu{position:absolute;z-index:40;top:calc(100% + 8px);right:0;min-width:220px;padding:6px;border:1px solid var(--line);border-radius:12px;background:#101e2a;box-shadow:0 16px 40px #00000066}
+.topbar-menu button{width:100%;min-height:44px;justify-content:flex-start;gap:10px;padding:0 12px;font-size:13px;color:var(--text)}
+@media(max-width:520px){
+ .topbar{position:relative;z-index:30;overflow:visible;gap:4px;padding-inline:8px}
+ .top-actions{gap:2px;flex:none}
+ .top-actions #open-shortcuts{display:none}
+ .top-more{display:block;position:relative;flex:none}
+ #topbar-more{display:inline-flex;width:44px;height:44px;min-width:44px;min-height:44px;font-size:22px;line-height:1;letter-spacing:0}
+ .brain-picker{max-width:64px;min-width:0}
+}
 .sync-button[data-sync=off]{color:var(--muted)}
 @keyframes sync-pulse{to{opacity:.35}}
 @media(prefers-reduced-motion:reduce){.sync-button[data-sync=syncing] .sync-dot,.sync-dot[data-state=syncing]{animation:none}}
