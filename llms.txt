@@ -25,7 +25,7 @@ Key facts:
 - [Privacy](https://notryn.com/privacy.html): what stays local and when GitHub is involved
 - [Terms & license](https://notryn.com/terms.html): free use, PolyForm Shield 1.0.0 license, contributions
 - [Security](https://notryn.com/security.html): private vulnerability reporting and installer integrity checks
-- [Contact](https://notryn.com/contact.html): GitHub issues and maintainer email
+- [Contact](https://notryn.com/contact.html): GitHub issues, maintainer email and operator details
 
 ## Optional
 
